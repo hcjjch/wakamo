@@ -1,0 +1,258 @@
+@import "./mixins/config.scss";
+
+@font-face {
+  font-family: "serina-ui-icons";
+  /* Project id 4171569 */
+  src: url("./fonts/iconfont.woff2") format("woff2"),
+    url("./fonts/iconfont.woff") format("woff"),
+    url("./fonts/iconfont.ttf") format("truetype");
+}
+
+// .serina-icon-开头的都能匹配到这个样式
+[class^="#{$namespace}-icon-"] {
+  font-family: "serina-ui-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.serina-icon-check-circle:before {
+  content: "\e77d";
+}
+
+.serina-icon-CI:before {
+  content: "\e77e";
+}
+
+.serina-icon-cloud:before {
+  content: "\e7d9";
+}
+
+.serina-icon-cloud-download:before {
+  content: "\e7da";
+}
+
+.serina-icon-cloud-sync:before {
+  content: "\e7db";
+}
+
+.serina-icon-video:before {
+  content: "\e7dc";
+}
+
+.serina-icon-notification:before {
+  content: "\e7dd";
+}
+
+.serina-icon-sound:before {
+  content: "\e7de";
+}
+
+.serina-icon-radarchart:before {
+  content: "\e7df";
+}
+
+.serina-icon-qrcode:before {
+  content: "\e7e0";
+}
+
+.serina-icon-fund:before {
+  content: "\e7e1";
+}
+
+.serina-icon-image:before {
+  content: "\e7e2";
+}
+
+.serina-icon-mail:before {
+  content: "\e7e3";
+}
+
+.serina-icon-table:before {
+  content: "\e7e4";
+}
+
+.serina-icon-idcard:before {
+  content: "\e7e5";
+}
+
+.serina-icon-creditcard:before {
+  content: "\e7e6";
+}
+
+.serina-icon-heart:before {
+  content: "\e7e7";
+}
+
+.serina-icon-block:before {
+  content: "\e7e8";
+}
+
+.serina-icon-error:before {
+  content: "\e7e9";
+}
+
+.serina-icon-star:before {
+  content: "\e7ea";
+}
+
+.serina-icon-gold:before {
+  content: "\e7eb";
+}
+
+.serina-icon-heatmap:before {
+  content: "\e7ec";
+}
+
+.serina-icon-wifi:before {
+  content: "\e7ed";
+}
+
+.serina-icon-attachment:before {
+  content: "\e7ee";
+}
+
+.serina-icon-edit:before {
+  content: "\e7ef";
+}
+
+.serina-icon-key:before {
+  content: "\e7f0";
+}
+
+.serina-icon-api:before {
+  content: "\e7f1";
+}
+
+.serina-icon-disconnect:before {
+  content: "\e7f2";
+}
+
+.serina-icon-highlight:before {
+  content: "\e7f3";
+}
+
+.serina-icon-shengri:before {
+  content: "\e80f";
+}
+
+.serina-icon-zhaomu:before {
+  content: "\e810";
+}
+
+.serina-icon-wendu:before {
+  content: "\e811";
+}
+
+.serina-icon-shandian:before {
+  content: "\e812";
+}
+
+.serina-icon-saoma:before {
+  content: "\e813";
+}
+
+.serina-icon-faxian:before {
+  content: "\e814";
+}
+
+.serina-icon-jifen:before {
+  content: "\e815";
+}
+
+.serina-icon-yundong:before {
+  content: "\e816";
+}
+
+.serina-icon-bingli:before {
+  content: "\e817";
+}
+
+.serina-icon-zhifu:before {
+  content: "\e818";
+}
+
+.serina-icon-shenfen:before {
+  content: "\e819";
+}
+
+.serina-icon-tongxun:before {
+  content: "\e81a";
+}
+
+.serina-icon-jilu:before {
+  content: "\e81b";
+}
+
+.serina-icon-shuiguo:before {
+  content: "\e81c";
+}
+
+.serina-icon-lvtong:before {
+  content: "\e81d";
+}
+
+.serina-icon-yuedu:before {
+  content: "\e81e";
+}
+
+.serina-icon-yuer:before {
+  content: "\e81f";
+}
+
+.serina-icon-fenlei:before {
+  content: "\e820";
+}
+
+.serina-icon-baogao:before {
+  content: "\e821";
+}
+
+.serina-icon-chufang:before {
+  content: "\e822";
+}
+
+.serina-icon-renzheng:before {
+  content: "\e823";
+}
+
+.serina-icon-fufei:before {
+  content: "\e824";
+}
+
+.serina-icon-goumai:before {
+  content: "\e825";
+}
+
+.serina-icon-yaoxiang:before {
+  content: "\e826";
+}
+
+.serina-icon-tupian:before {
+  content: "\e827";
+}
+
+.serina-icon-chuandai:before {
+  content: "\e828";
+}
+
+.serina-icon-meirong:before {
+  content: "\e829";
+}
+
+.serina-icon-prev:before {
+  content: "\e600";
+}
+
+.serina-icon-prev1:before {
+  content: "\e613";
+}
+
+.serina-icon-next:before {
+  content: "\e917";
+}
+
+.serina-icon-next1:before {
+  content: "\e601";
+}

@@ -1,0 +1,22 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+// 这里需要写生成24种写法, BEM规范
+@include b(col) {
+
+  // 从1到24进行遍历
+  @for $i from 1 through 24 {
+    box-sizing: border-box;
+
+    // flex布局
+    &.serina-col-span-#{$i} {
+      max-width: (1 / 24 * $i * 100) * 1%; // 添加最大的宽度, 防止内部元素撑出
+      flex: (1 / 24 * $i * 100) * 1%; //  计算flex布局的每一分占据的百分比
+    }
+
+    // 偏移量(就是margin-left的大小)
+    &.serina-col-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%; // 向左偏移的分量
+    }
+  }
+}

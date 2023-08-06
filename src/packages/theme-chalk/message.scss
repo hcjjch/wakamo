@@ -1,0 +1,48 @@
+@import "./mixins/mixin.scss";
+
+@include b(message) {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 10px;
+  min-width: 300px;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: rgba(128, 0, 255, 0.482);
+  opacity: 1;
+  transition: all 0.3s linear;
+
+
+
+
+
+  @include m(warning) {
+    @include message-type(white, $--color-warning, $--color-warning)
+  }
+
+  @include m(danger) {
+    @include message-type(white, $--color-danger, $--color-danger)
+  }
+
+  @include m(error) {
+    @include message-type(white, $--color-error, $--color-error)
+  }
+
+  @include m(success) {
+    @include message-type(white, $--color-success, $--color-success)
+  }
+
+  @include when(center) {
+    justify-content: center;
+  }
+
+}
+
+.serina-message-fade-enter-from,
+.serina-message-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

@@ -1,0 +1,65 @@
+// 这样做提高代码的复用性
+
+@import "../common/var.scss";
+
+// 效果
+// @include b(button) {
+//   color: red
+// }
+
+// 类名 .serina-button{}
+@mixin b($block) {
+  $B: $namespace +'-'+$block; // 将@include b(button)使用后, $namespace: "serina";
+
+  // .serina-button{ color: red }
+  .#{$B} {
+    @content; // 就是第五行的color: red的内容
+  }
+}
+
+
+// @include when(disabled) {
+//   color: red
+// }
+
+@mixin when($state) {
+  @at-root {
+
+    // $state-prefix: "is-" 效果 .serina-button.is-disabled &表示当前的父元素
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root {
+
+    // $modifier-separator: "--"; 效果  &表示当前的父元素 .serina-button--
+    #{&+$modifier-separator+$modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin e($element) {
+  @at-root {
+    #{&+$element-separator+$element} {
+      @content;
+    }
+  }
+}
+
+// button的方法
+@mixin button-type($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+}
+
+// message的方法
+@mixin message-type($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+}
